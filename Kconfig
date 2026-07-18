@@ -31,7 +31,7 @@ if RGBLED_WIDGET_WS2812
 
 config RGBLED_WIDGET_LED_COUNT
     int "Number of LEDs in the strip"
-    range 1 4
+    range 1 32
     default 2
     help
       Number of addressable LEDs in the WS2812 strip. Maximum 4 LEDs
@@ -78,7 +78,7 @@ config RGBLED_WIDGET_BRIGHTNESS
 # LED Mapping Configuration
 config RGBLED_WIDGET_BATTERY_LED_INDEX
     int "LED index for battery status"
-    range 0 3
+    range 0 31
     default 0
     depends on RGBLED_WIDGET_SPATIAL_MAPPING
     help
@@ -86,7 +86,7 @@ config RGBLED_WIDGET_BATTERY_LED_INDEX
 
 config RGBLED_WIDGET_CONN_LED_INDEX
     int "LED index for connectivity status"
-    range 0 3
+    range 0 31
     default 1
     depends on RGBLED_WIDGET_SPATIAL_MAPPING
     help
@@ -94,7 +94,7 @@ config RGBLED_WIDGET_CONN_LED_INDEX
 
 config RGBLED_WIDGET_LAYER_LED_INDEX
     int "LED index for layer status"
-    range 0 3
+    range 0 31
     default 2
     depends on RGBLED_WIDGET_SPATIAL_MAPPING
     help
@@ -284,7 +284,7 @@ config RGBLED_WIDGET_SHOW_CAPSLOCK
 config RGBLED_WIDGET_CAPSLOCK_LED_INDEX
     int "LED index for Caps Lock"
     depends on (RGBLED_WIDGET_SHOW_CAPSLOCK && RGBLED_WIDGET_SPATIAL_MAPPING)
-    range 0 3
+    range 0 31
     default 0
 
 # Layer indicator settings
