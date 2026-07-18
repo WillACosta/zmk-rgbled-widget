@@ -25,7 +25,7 @@ if RGBLED_WIDGET_WS2812
 
 #config LED_STRIP
 #    default y
-    
+
 #config WS2812_STRIP
 #    default y
 
